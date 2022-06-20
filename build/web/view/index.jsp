@@ -20,14 +20,17 @@
                 text-decoration: none;
             }
             .khung-trang {
-                width: 1170px;
+                width: 80%;
                 margin: 0 auto;
             }
             .anh-bn {
                 background-image: url("https://hgshop.asia/wp-content/uploads/2022/05/slide2-copy.webp");
                 background-size: cover;
                 width: 100%;
-                height: 700px;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .san-pham-moi, .ds-sanpham-con {
                 padding: 30px 0;
@@ -43,7 +46,8 @@
             }
             .anh {
                 object-fit: cover;
-                width: 100%;
+                width: 200px;
+                height: 200px;
             }
             .ten {
                 color: #1d1d1d;
@@ -58,6 +62,8 @@
 
             .tinh-nang {
                 display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
                 justify-content: space-between;
                 padding: 30px 0;
             }
@@ -101,12 +107,13 @@
                 align-items: center;
                 padding: 10px 0;
             }
-            
+
             .menu {
                 flex: 1;
                 padding-left: 20px;
                 font-size: 18px;
             }
+
 
         </style>
     </head>
@@ -118,7 +125,7 @@
 
                     <div class="menu">
                         <a href="">Trang chủ</a>
-                        <a href="#phan-muc-danh-sach-sp">Sản phẩm</a>
+                        <a href="danh-sach-san-pham">Sản phẩm</a>
                     </div>
 
                     <div class="tien-ich">
@@ -128,12 +135,14 @@
             </div>
 
             <div class="anh-bn">
-                <div>Shopping now</div>
+                <div class="khung-trang">
+                    <div class="td-mota-sanpham">Cửa hàng đang có chương trình giảm giá và có nhiều ưu đãi</div>
+                    
+                </div>
             </div>
             <div class="khung-trang">
                 <div class="tieu-de-mota">
-                    <div class="td-mota-sanpham">Discover NEW Arrivals</div>
-                    <div class="mo-ta-dai">Recently added headphone!</div>
+                    <div class="td-mota-sanpham">Sản phẩm mới</div>
                 </div>
                 <div class="san-pham-moi">
                 </div>
@@ -148,16 +157,16 @@
             </div>
             <div class="uu-dai">
                 <div class="uu-dai-1">
-                    <div class="ten-ud">Peace of Mind</div>
+                    <div class="ten-ud">Đảm bảo</div>
                     <div class="mo-ta-ud">
-                        A one-stop platform for all your fashion needs, hassle-free. Buy with a peace of mind.
+                        Một nền tảng duy nhất cho mọi nhu cầu đồ điện tử của bạn, đơn giản. Mua hàng an tâm.
                     </div>
                 </div>
 
                 <div class="uu-dai-1">
-                    <div class="ten-ud">Buy 2 Get 1 Free</div>
+                    <div class="ten-ud">Mua 2 tặng 1</div>
                     <div class="mo-ta-ud">
-                        End of season sale. Buy any 2 items of your choice and get 1 free.
+                        Giảm giá cuối mùa. Mua 2 sản phẩm bất kỳ mà bạn chọn và nhận 1 sản phẩm miễn phí
                     </div>
                 </div>
             </div>
@@ -171,16 +180,16 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="khung-trang">
                 <div class="dau-trang">
                     <a href=""><img src="https://hgshop.asia/wp-content/uploads/2022/06/Logo-web.png" class="logo-web" /></a>
-                    
+
                     <div class="lien-he">
-                        <div class="ket-noi">About</div>
-                        <div class="ket-noi">Contact</div>
+                        <div class="ket-noi">Về chúng tôi</div>
+                        <div class="ket-noi">Kết nối</div>
                     </div>
-                    
+
                     <div class="mang-xa-hoi">
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-youtube"></i>

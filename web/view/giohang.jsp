@@ -7,6 +7,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
         <style>
+            a {
+                text-decoration: none;
+            }
             a:hover {
                 text-decoration: none;
                 color: inherit;
@@ -66,19 +69,46 @@
                 color: #fff;
                 padding: 15px 20px;
             }
-                
+            .dau-trang {
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .menu {
+                flex: 1;
+                padding-left: 20px;
+                font-size: 18px;
+            }
         </style>
     </head>
     <body>
         <div id="gio-hang">
             <div class="khung-trang">
+                <div class="dau-trang">
+                    <a href="/btl-web"><img src="https://hgshop.asia/wp-content/uploads/2022/06/Logo-web.png" class="logo-web" /></a>
+
+                    <div class="menu">
+                        <a href="/btl-web">Trang chủ</a>
+                        <a href="danh-sach-san-pham">Sản phẩm</a>
+                    </div>
+
+                    <div class="tien-ich">
+                        <a href="gio-hang"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="khung-trang">
                 <div class="ds-san-pham">
                     <div class="mo-ta tieu-de">
-                        <div class="san-pham">Product</div>
-                        <div class="gia">Price</div>
-                        <div class="so-luong">Quantity</div>
-                        <div class="tien">Total</div>
-                        <div class="xoa">Remove</div>
+                        <div class="san-pham">Sản phẩm</div>
+                        <div class="gia">Giá</div>
+                        <div class="so-luong">Số lượng</div>
+                        <div class="tien">Tổng tiền</div>
+                        <div class="xoa"></div>
                     </div>
 
                     <div class="san-pham-trong-gio">
@@ -86,24 +116,24 @@
 
                 </div>
                 <div class="tong-tien">
-                    <div class="tien-thanh-toan">Cart totals</div>
+                    <div class="tien-thanh-toan">Tổng tiền dự tính</div>
                     <div class="bang-tien">
                         <div class="thanh-phan tien-sp">
-                            <div class="tinh-tien-tam">Subtotal</div>
+                            <div class="tinh-tien-tam">Tổng tiền tạm tính</div>
                             <div class="tien so-tien"></div>
                         </div>
                         <div class="tien-ship tien-sp">
-                            <div class="tinh-tien-tam">Shipping</div>
+                            <div class="tinh-tien-tam">Phí giao hàng</div>
                             <div class="tien">Free</div>
                         </div>
                         <div class="thanh-tien tien-sp">
-                            <div class="tinh-tien-tam">Total</div>
+                            <div class="tinh-tien-tam">Tổng</div>
                             <div class="tien so-tien"></div>
                         </div>
                     </div>                    
                 </div>
                 
-                <a href="don-hang" class="don-hang">Checkout</a>
+                <a href="don-hang" class="don-hang">Thông tin người nhận cho đơn hàng</a>
             </div>
         </div>
     </body>

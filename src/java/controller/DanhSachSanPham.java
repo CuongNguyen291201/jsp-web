@@ -6,6 +6,7 @@ package controller;
 
 import dao.SanPhamDAO;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -22,11 +23,11 @@ import model.SanPham;
  *
  * @author cuong
  */
-@WebServlet(name = "TrangChu", urlPatterns = {"/"})
-public class TrangChu extends HttpServlet {
+@WebServlet(name = "DanhSachSanPham", urlPatterns = {"/danh-sach-san-pham"})
+public class DanhSachSanPham extends HttpServlet {
 
     private SanPhamDAO SanPhamDAO;
-    public TrangChu() {
+    public DanhSachSanPham() {
         SanPhamDAO = new SanPhamDAO();
     }
     
@@ -47,6 +48,7 @@ public class TrangChu extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(TrangChu.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     /**
@@ -61,22 +63,13 @@ public class TrangChu extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
-
-//    private void dsSanPham(HttpServletRequest request, HttpServletResponse response)
-//            throws SQLException, IOException, ServletException {
-//        List<SanPham> danhsachSp = SanPhamDAO.danhSachSp();
-//        request.setAttribute("danhsachSp", danhsachSp);
-//
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/index.jsp");
-//        dispatcher.forward(request, response);
-//    }
+    
     private void dsSanPham(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         List<SanPham> danhsachSp = SanPhamDAO.danhSachSp();
         request.setAttribute("danhsachSp", danhsachSp);
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/index.jsp");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/danhsachsanpham.jsp");
         dispatcher.forward(request, response);
     }
-    
 }

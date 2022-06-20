@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Trang chủ</title>
+        <title>Danh sách sản phẩm</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
         <style>
@@ -22,15 +22,6 @@
             .khung-trang {
                 width: 80%;
                 margin: 0 auto;
-            }
-            .anh-bn {
-                background-image: url("https://hgshop.asia/wp-content/uploads/2022/05/slide2-copy.webp");
-                background-size: cover;
-                width: 100%;
-                height: 400px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }
             .san-pham-moi, .ds-sanpham-con {
                 padding: 30px 0;
@@ -58,33 +49,6 @@
                 color: #1d1d1d;
                 font-size: 16px;
                 font-weight: 500;
-            }
-
-            .tinh-nang {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-                justify-content: space-between;
-                padding: 30px 0;
-            }
-
-            .uu-dai {
-                display: flex;
-                justify-content: space-between;
-                gap: 50px;
-                padding: 50px 0;
-            }
-
-            .uu-dai-1 {
-                background: #000;
-                padding: 100px 80px;
-                color: #fff;
-                text-align: center;
-            }
-
-            .ten-ud {
-                font-size: 30px;
-                font-weight: 600;
             }
 
             .tieu-de-mota {
@@ -121,10 +85,10 @@
         <div id="trang-chu">
             <div class="khung-trang">
                 <div class="dau-trang">
-                    <a href=""><img src="https://hgshop.asia/wp-content/uploads/2022/06/Logo-web.png" class="logo-web" /></a>
+                    <a href="/btl-web"><img src="https://hgshop.asia/wp-content/uploads/2022/06/Logo-web.png" class="logo-web" /></a>
 
                     <div class="menu">
-                        <a href="">Trang chủ</a>
+                        <a href="/btl-web">Trang chủ</a>
                         <a href="danh-sach-san-pham">Sản phẩm</a>
                     </div>
 
@@ -134,51 +98,13 @@
                 </div>
             </div>
 
-            <div class="anh-bn">
-                <div class="khung-trang">
-                    <div class="td-mota-sanpham">Cửa hàng đang có chương trình giảm giá và có nhiều ưu đãi</div>
-                    
-                </div>
-            </div>
             <div class="khung-trang">
                 <div class="tieu-de-mota">
-                    <div class="td-mota-sanpham">Sản phẩm mới</div>
+                    <div class="td-mota-sanpham">Danh sách sản phẩm</div>
                 </div>
                 <div class="san-pham-moi">
                 </div>
 
-                <div class="tinh-nang">
-                    <img class="tn-1" src="https://hgshop.asia/wp-content/uploads/2022/05/1.png" />
-                    <img class="tn-2" src="https://hgshop.asia/wp-content/uploads/2022/05/2.png" />
-                    <img class="tn-3" src="https://hgshop.asia/wp-content/uploads/2022/05/3.png" />
-                    <img class="tn-4" src="https://hgshop.asia/wp-content/uploads/2022/05/4.png" />
-                </div>
-
-            </div>
-            <div class="uu-dai">
-                <div class="uu-dai-1">
-                    <div class="ten-ud">Đảm bảo</div>
-                    <div class="mo-ta-ud">
-                        Một nền tảng duy nhất cho mọi nhu cầu đồ điện tử của bạn, đơn giản. Mua hàng an tâm.
-                    </div>
-                </div>
-
-                <div class="uu-dai-1">
-                    <div class="ten-ud">Mua 2 tặng 1</div>
-                    <div class="mo-ta-ud">
-                        Giảm giá cuối mùa. Mua 2 sản phẩm bất kỳ mà bạn chọn và nhận 1 sản phẩm miễn phí
-                    </div>
-                </div>
-            </div>
-
-            <div class="khung-trang">
-                <div class="ds-san-pham">
-                    <div class="tieu-de-mota">
-                        <div class="td-mota-sanpham" id="phan-muc-danh-sach-sp">Danh sách sản phẩm</div>
-                    </div>
-                    <div class="ds-sanpham-con">
-                    </div>
-                </div>
             </div>
 
             <div class="khung-trang">
@@ -202,20 +128,8 @@
     <script type="text/javascript">
         let data = <%=request.getAttribute("danhsachSp")%>;
         $(document).ready(() => {
-            data.slice(0, 4).map(item => {
-                $('.san-pham-moi').append(`
-                    <div class="san-pham">
-                        <a href="san-pham?ma=` + item.ma + `">
-                            <img class="anh" src=` + item.anh + ` />
-                            <div class="ten">` + item.ten + `</div>
-                            <div class="gia">$` + item.gia + `</div>
-                        </a>
-                    </div>
-                `)
-            });
-
             data.map(item => {
-                $('.ds-sanpham-con').append(`
+                $('.san-pham-moi').append(`
                     <div class="san-pham">
                         <a href="san-pham?ma=` + item.ma + `">
                             <img class="anh" src=` + item.anh + ` />
